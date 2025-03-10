@@ -7,7 +7,7 @@ use Bitrix\Main\Config\Option;
 
 class Vite extends \Bitrix\Main\Engine\Controller
 {
-    public function buildAction()
+    public function buildAction(): AjaxJson
     {
         $viteFolder = Option::get('zeantar.vite', 'VITE_LOCATION', null);
 

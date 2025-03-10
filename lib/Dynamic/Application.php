@@ -12,7 +12,7 @@ final class Application
     public string $unique;
 
     /**
-     * @param string $content
+     * @param string $content Vue SFC
      */
     public function __construct(private readonly string $content)
     {

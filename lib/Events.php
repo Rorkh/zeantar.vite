@@ -6,7 +6,8 @@ use Bitrix\Main\Config\Option;
 use Zeantar\Vite\Exception\UnclosedInlineException;
 final class Events
 {
-    private static function findTextOccurance(string $haystack, string $needle) {
+    private static function findTextOccurance(string $haystack, string $needle): array
+    {
         $offsets = [];
         $offset = 0;
     
@@ -20,7 +21,7 @@ final class Events
         return $offsets;
     }
 
-    private static function mb_substr_replace($string, $replacement, $start, $length=NULL)
+    private static function mb_substr_replace(string|array $string, string|array $replacement, int $start, ?int $length = null): array|string
     {
         if (is_array($string)) {
             $num = count($string);
@@ -168,7 +169,7 @@ final class Events
         }
     }
 
-    public static function OnEndBufferContent(&$content)
+    public static function OnEndBufferContent(&$content): void
     {
         $vite = Vite::getInstance();
         if (!$vite->isAutoloadEnabled() || $vite->isInjected()) {
