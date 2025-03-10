@@ -10,4 +10,4 @@ If you encounter problems while using the module, before writing an issue you sh
 
 - [ ] You rebuilded Vite in module settings
 - [ ] You have tried deleting all folders in vite/src/dynamic folder and rebuilding Vite
-- [ ] You have tries deleting vite/dist folder
+- [ ] You have tried deleting vite/dist folder
